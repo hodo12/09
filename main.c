@@ -5,19 +5,24 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int grade[N_STUDENT];
-	int score[N_STUDENT];
+	int a[N_STUDENT] = {1,2,3,4,5};
+	int b[N_STUDENT] = {1,2,3,4,6};
 	int i;
-	
-	
-	for(i = 0; i<N_STUDENT; i++)
-	grade[i] = rand()%100 + 1;
+	int flag = 0;
 	
 	for(i = 0;i<N_STUDENT; i++)
-	score[i] = grade[i];
+	{ 
 	
-	for(i = 0;i<N_STUDENT; i++)
-	printf("score[%d] = %d (grade : %i)\n",i, grade[i], score[i] );
+	if(a[i] != b[i])
+	{
+	printf("array a and b are not the same\n");
+	flag = 1;
+	}
+	}
+	
+	if(flag == 0)
+	printf("array a and b are the same\n");
+
 	
 	return 0;
 }
