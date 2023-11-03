@@ -6,19 +6,18 @@
 
 int main(int argc, char *argv[]) {
 	int grade[N_STUDENT];
-	int i,sum,averge;
-	printf("input 5 sorces : ");
+	int score[N_STUDENT];
+	int i;
 	
-	sum = 0;
-	for(i = 0; i<N_STUDENT; i++){
-	scanf("%d", &grade[i]);
-	sum += grade[i];
-	}
 	
-	averge = sum / N_STUDENT;
-	printf("score averge :%i\n",averge);
-
+	for(i = 0; i<N_STUDENT; i++)
+	grade[i] = rand()%100 + 1;
 	
+	for(i = 0;i<N_STUDENT; i++)
+	score[i] = grade[i];
+	
+	for(i = 0;i<N_STUDENT; i++)
+	printf("score[%d] = %d (grade : %i)\n",i, grade[i], score[i] );
 	
 	return 0;
 }
